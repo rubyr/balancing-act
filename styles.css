@@ -1,0 +1,26 @@
+html {
+    font-family: 'Biryani', sans-serif;
+    background-color: #eee;
+}
+
+nav {
+    width: 50px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fff;
+    display: inline;
+    position: fixed;
+    float: left;
+}
+
+main {
+    background-color: #eee;
+    margin-left: 50px;
+    display: inline;
+    float: left;
+}
+
+nav img {
+    width: 80%;
+}
