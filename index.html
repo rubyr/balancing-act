@@ -5,36 +5,83 @@
         <title>Balancing Act</title>
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Biryani&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="main.js"></script>
     </head>
     <body>
         <nav>
-            <a href="index.html">
-                <img src="assets/elephant.svg" alt="Balancing Act" class="logo">
+            <a href="#">
+                <img src="assets/elephant.svg" aria-label="Balancing Act" class="logo">
             </a>
             <div></div>
             <ul>
                 <li class="selected">
                     <!-- overview -->
-                    <a href="#">
-                        <img src="assets/dashboard.svg" alt="Dashboard" />
+                    <a href="index.html">
+                        <img src="assets/dashboard.svg" aria-label="Dashboard" />
                     </a>
                 </li>
                 <li>
                     <!-- transactions -->
                     <a href="#">
-                        <img src="assets/transactions.svg" alt="Transactions" />
+                        <img src="assets/transactions.svg" aria-label="Transactions" />
                     </a>
                 </li>
                 <li>
                     <!-- account -->
                     <a href="#">
-                        <img src="assets/profile.svg" alt="Profile" />
+                        <img src="assets/profile.svg" aria-label="Profile" />
                     </a>
                 </li>
             </ul>
         </nav>
         <main>
-            <h1>Balancing Act</h1>
+            <section class="left-side">
+                <h1>Balancing Act</h1>
+                <section class="banner" id="banner">
+                    <h3>Welcome, Oscar!</h3>
+                    <button onclick="clearBanner()">&times;</button>
+                </section>
+                <section id="dashboardStatsHolder">
+                    <section class="dashboardStats">
+                        <p>INCOME</p>
+                        <h3>$2,119.12</h3>
+                    </section>
+                    <section class="dashboardStats">
+                        <p>EXPENSES</p>
+                        <h3>$420.69</h3>
+                    </section>
+                    <section class="dashboardStats">
+                        <p>CREDIT SCORE</p>
+                        <h3>673</h3>
+                    </section>
+                </section>
+                <div class="break"></div>
+                <section id="accountHolder">
+                    <h2>Accounts</h2>
+                    <button class="button">MANAGE ACCOUNTS</button>
+
+                    <section class="account">
+                        <img src="assets/checking.svg" alt="Checking">
+                        <p>Wells Fargo</p>
+                        <p>Checking</p>
+                    </section>
+                    <section class="account">
+                        <img src="assets/savings.svg" alt="Savings">
+                        <p>Wells Fargo</p>
+                        <p>Savings</p>
+                    </section>
+                    <section class="account">
+                        <img src="assets/credit-card.svg" alt="Credit Card">
+                        <p>Amazon Credit</p>
+                        <p>Credit Card</p>
+                    </section>
+                    <section class="account">
+                        <img src="assets/credit-card.svg" alt="Checking">
+                        <p class="account-name">Southwest Credit</p>
+                        <p class="account-type">Credit Card</p>
+                    </section>
+                </section>
+            </section>
         </main>
     </body>
 </html>
