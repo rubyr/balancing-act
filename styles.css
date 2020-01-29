@@ -1,196 +1,221 @@
+/* overall page styling */
+
 html {
-    font-family: 'Biryani', sans-serif;
-    color: #363636;
-    background-color: #f5f5f5;
-    --highlight-color: #1CA3BA;
+  background-color: #f5f5f5;
+  font-family: 'Biryani', sans-serif;
+  color: #363636;
+  --highlight-color: #1CA3BA;
 }
+
+/* navbar styling */
 
 nav {
-    width: 80px;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    background-color: #fff;
-    display: inline;
-    position: fixed;
-    float: left;
-    z-index: 20;
-    top: 0;
-    left: 0;
-}
-
-main {
-    margin-left: 80px;
-    padding-left: 20px;
-    display: inline;
-    float: left;
-    width: calc(100% - 100px);
-}
-
-nav img {
-    display: block;
-    width: 50%;
-    margin: auto;
-    margin-top: 10px;
-}
-
-nav div {
-    height: 27%;
-    display: block;
-}
-
-nav ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-nav li {
-    border-left: 5px solid transparent;
-    margin-bottom: 20px;
+  width: 80px;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
+  display: inline;
+  position: fixed;
+  float: left;
+  z-index: 20;
+  top: 0;
+  left: 0;
 }
 
 .logo {
-    width: 80%;
-    padding-top:5px;
+  width: 80%;
+  padding-top:5px;
 }
 
-.selected {
-    border-left: 5px solid var(--highlight-color);
+.selectedTab {
+  border-left: 5px solid var(--highlight-color);
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  position: relative;
+  top: 180px;
+}
+
+nav li {
+  border-left: 5px solid transparent;
+  margin-bottom: 20px;
+  width: 75px;
+  transition: width 0.1s ease;
+}
+
+nav li:not(.selectedTab):hover {
+  width: 80px;
+}
+
+nav img {
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* main window styling */
+
+main {
+  margin-left: 80px;
+  padding-left: 20px;
+  display: inline;
+  float: left;
+  width: calc(100% - 100px);
 }
 
 .left-side {
-    width: 45%;
-    float: left;
+  width: 45%;
+  float: left;
 }
 
 .banner {
-    background-image: linear-gradient(to right, #8ED1DC, #E3F4F6);
-    padding: 30px 0px 30px 25px;
-    width: calc(100% - 20px);
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(to right, #8ED1DC, #E3F4F6);
+  padding: 30px 0px 30px 25px;
+  width: calc(100% - 20px);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.05);
 }
 
 .banner h3 {
-    display: inline;
+  display: inline;
 }
 
 .banner button {
-    float: right;
-    margin: -20px 10px;
-    background-color: transparent;
-    border: 0px;
-    font-size: 1.25em;
+  float: right;
+  margin: -20px 15px;
+  background-color: transparent;
+  border: 0px;
+  font-size: 1.25em;
+  transition: background-color .2s ease;
+  border-radius: 5px;
+}
+
+.banner button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.banner button img {
+  width: 10px;
 }
 
 #dashboardStatsHolder {
-    overflow: hidden;
-    margin: 20px 0 0 0;
+  overflow: hidden;
+  margin: 20px 0 0 0;
 }
 
 .dashboardStats {
-    width: 25%;
-    margin: 5px 7.3% 0 0;
-    float: left;
-    background-color: white;
-    padding: 1px 0px 0px 20px;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.05);
+  width: 25%;
+  margin: 5px 7.3% 0 0;
+  float: left;
+  background-color: white;
+  padding: 1px 0px 0px 20px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.05);
 }
+
 .dashboardStats:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .dashboardStats p {
-    font-size: .65em;
-    margin: 10px 0 0 0;
+  font-size: .65em;
+  margin: 10px 0 0 0;
 }
 
 .dashboardStats h3 {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 
 .break {
-    clear: both;
-    display: block;
-    width: 1px;
-    height: 30px;
+  clear: both;
+  display: block;
+  width: 1px;
+  height: 30px;
 }
 
 h2 {
-    display: inline;
+  display: inline;
 }
 
 .button {
-    background-color: var(--highlight-color);
-    border: 0px;
-    border-radius: 100000em; /* this gives it a rounded edge look */
-    color: white;
-    padding: 10px 20px;
-    float: right;
-    box-shadow: rgba(0, 0, 0, 0.05);
+  background-color: var(--highlight-color);
+  border: 0px;
+  border-radius: 100000em; /* this gives it a rounded edge look */
+  color: white;
+  padding: 10px 20px;
+  float: right;
+  box-shadow: rgba(0, 0, 0, 0.05);
+  transition: background-color .2s ease;
+}
+
+.button:hover {
+  background-color: #00839A;
 }
 
 .account {
-    height: 50px;
-    display: block;
-    background-color: white;
-    overflow: hidden;
-    margin: 0px 0px 10px;
-    padding: 5px 0 5px 0;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.05);
+  height: 50px;
+  display: block;
+  background-color: white;
+  overflow: hidden;
+  margin: 0px 0px 10px;
+  padding: 5px 0 5px 0;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05);
 }
 
 .account img {
-    height: 90%;
-    display: inline;
-    float: left;
-    clear: both;
-    margin: 0 0 0 20px;
+  height: 90%;
+  display: inline;
+  float: left;
+  clear: both;
+  margin: 0 0 0 20px;
 }
 
 .account-name {
-    float: left;
-    height: 100%;
-    margin-left: 50px;
-    width: 40%;
+  float: left;
+  height: 100%;
+  margin-left: 50px;
+  width: 40%;
 }
 
 .account-type {
-    float: left;
+  float: left;
 }
 
 .right-side {
-    float: right;
-    display: inline;
-    width: 45%;
+  float: right;
+  display: inline;
+  width: 45%;
 }
 
 .recent-transactions {
-    transform: translate(-60px, 0px);
-    background: white;
-    padding: 35px 25px;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
+  transform: translate(-60px, 0px);
+  background: white;
+  padding: 35px 25px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 10px 0;
-    margin: 10px 0 0 0;
+  border-collapse: collapse;
+  border-spacing: 10px 0;
+  margin: 10px 0 0 0;
 }
 
 th {
-    text-align: left;
+  text-align: left;
 }
 
 tr {
-    border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 td {
-    padding: 7px 0 5px;
+  padding: 7px 0 5px;
 }
