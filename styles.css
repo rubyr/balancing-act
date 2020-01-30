@@ -129,7 +129,7 @@ td {
   padding: 30px 0px 30px 25px;
   background-image: linear-gradient(to right, #8ED1DC, #E3F4F6);
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
 }
 
 .banner h3 {
@@ -168,12 +168,15 @@ td {
 .dashboardStats {
   float: left;
   width: 25%;
-  margin: 5px 7.3% 0 0;
+  margin: 5px 41px 4px 0;
   padding: 1px 0px 0px 20px;
   background-color: white;
   border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.02);
+}
+
+.dashboardStats:first-child {
+  margin-left: 5px;
 }
 
 .dashboardStats:last-child {
@@ -198,7 +201,7 @@ td {
   background-color: var(--highlight-color);
   border: 0px;
   border-radius: 100000em; /* this gives it a rounded edge look */
-  box-shadow: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
   transition: background-color .2s ease;
 }
 
@@ -219,7 +222,7 @@ td {
   padding: 5px 0 5px 0;
   background-color: white;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
@@ -255,6 +258,6 @@ td {
   padding: 35px 25px;
   background: white;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
   transform: translate(-60px, 0px); /* hacky! may need to fix */
 }
