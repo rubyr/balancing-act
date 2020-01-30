@@ -138,6 +138,8 @@ td {
 
 .banner button {
   float: right;
+  width: 24px;
+  height: 24px;
   margin: -20px 15px;
   background-color: transparent;
   border: 0px;
@@ -151,6 +153,8 @@ td {
 }
 
 .banner button img {
+  position: relative;
+  top: -3px;
   width: 10px;
 }
 
