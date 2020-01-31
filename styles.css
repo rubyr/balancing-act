@@ -77,13 +77,15 @@ main {
 }
 
 h2 {
-  display: inline;
+  display: inline-block;
 }
 
 table {
   margin: 10px 0 0 0;
+  padding: 0;
   border-collapse: collapse;
   border-spacing: 10px 0;
+  width: 100%;
 }
 
 tr {
@@ -107,6 +109,10 @@ td {
   padding-top:5px;
 }
 
+.hidden {
+  display: none;
+}
+
 /*   ---- "tab interface" classes */
 
 .selectedTab {
@@ -119,6 +125,7 @@ td {
 
 .left-side {
   float: left;
+  clear: both;
   width: 45%;
 }
 
@@ -209,6 +216,18 @@ td {
   background-color: #00839A;
 }
 
+.white {
+  margin: 0px 0px 0px 5px;
+  float: right;
+  border: 1px solid var(--highlight-color);
+  color: var(--highlight-color);
+  background-color: white;
+}
+
+.white:hover {
+  color: white;
+}
+
 /*     -- accounts */
 
 .accountHolder {
@@ -249,15 +268,40 @@ td {
 
 .right-side {
   float: right;
-  display: inline;
   width: 45%;
 }
 
-.recent-transactions {
-  width: 100%;
+.table-outline {
+  clear: both;
+  width: 90%;
   padding: 35px 25px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
-  transform: translate(-60px, 0px); /* hacky! may need to fix */
+}
+
+.move-table-hack {
+  transform: translate(-60px, 0px); 
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.inline-header {
+  display: inline-block;
+  float: left;
+  margin: 10px 0 0 0;
+}
+
+.button-holder {
+  float: right;
+  margin: 5px;
+}
+
+.center-text {
+  text-align: center;
+  width: 100%;
 }
