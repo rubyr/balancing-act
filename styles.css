@@ -69,8 +69,7 @@ nav img {
 }
 
 main {
-  float: left;
-  display: inline;
+  display: inline-block;
   width: calc(100% - 100px);
   margin-left: 80px;
   padding-left: 20px;
@@ -98,6 +97,34 @@ th {
 
 td {
   padding: 7px 0 5px;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+}
+
+select {
+  margin: 0;
+  width: 100%;
+  border: 0;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"] {
+  margin: 0;
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  padding: 3px;
+  border: 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+form p {
+  margin: 10px 0 3px;
 }
 
 /* |-------- CLASSES --------| */
@@ -293,15 +320,29 @@ td {
 .inline-header {
   display: inline-block;
   float: left;
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
 }
 
 .button-holder {
   float: right;
   margin: 5px;
+  transform: translate(0, -20px);
 }
 
 .center-text {
   text-align: center;
   width: 100%;
+}
+
+.submit {
+  float: left;
+  margin: 20px 0;
+}
+
+.nudge-up {
+  transform: translate(0, -20px);
+}
+
+.nudge-left {
+  transform: translate(-50px, 0);
 }

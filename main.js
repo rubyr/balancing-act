@@ -3,6 +3,9 @@
  var transactions = document.querySelector("#transactions");
  var transactionsTab = document.querySelector("#transactionsTab");
 
+ dashboardTab.addEventListener("click", openDashboardView);
+ transactionsTab.addEventListener("click", openTransactionsView);
+ 
 if (typeof(Storage) !== "undefined") {
     if (sessionStorage.getItem("hideBanner")) {
         clearBanner();

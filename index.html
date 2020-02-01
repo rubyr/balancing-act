@@ -15,12 +15,12 @@
       </a>
       <ul>
         <li class="selectedTab" id="dashboardTab">
-          <a href="#" onclick="openDashboardView()">
+          <a href="#">
             <img src="assets/dashboard.svg" aria-label="Dashboard" />
           </a>
         </li>
         <li id="transactionsTab">
-          <a href="#" onclick="openTransactionsView()">
+          <a href="#">
             <img src="assets/transactions.svg" aria-label="Transactions" />
           </a>
         </li>
@@ -150,7 +150,7 @@
     </main>
     <main id="transactions" class="hidden">
       <h1 class="inline-header">Transactions</h1>
-      <section class="left-side">
+      <section class="left-side nudge-up">
         <section class="button-holder clearfix">
           <button class="button white">INFLOW</button>
           <button class="button white">OUTFLOW</button>
@@ -266,11 +266,44 @@
           </table>
         </section>
       </section>
-      <section class="right-side">
+      <section class="right-side nudge-left">
         <section class="table-outline">
           <h2 class="center-text">New Transaction</h2>
-          <form action="">
-            
+          <form action="" class="clearfix">
+            <p>Type of Transaction:</p>
+            <select name="type" id="">
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
+              <option value="push">Push</option>
+              <option value="pull">Pull</option>
+            </select>
+            <p>Category:</p>
+            <select name="category" id="">
+              <option value="">- Select One -</option>
+              <option value="">bruh idk wtf to put here</option>
+              <option value="">like what do they want</option>
+            </select>
+            <p>Account from:</p>
+            <select name="account" id="">
+              <option value="">- Select One -</option>
+              <option value="">transport, motorways and tramlines</option>
+              <option value="">starting and then stopping</option>
+              <option value="">taking off and landing</option>
+              <option value="">the emptiest of feelings</option>
+              <option value="">disappointed people</option>
+              <option value="">clinging onto bottles</option>
+              <option value="">and when it comes it's so,</option>
+              <option value="">so disappointing</option>
+              <option value="">let down and hanging around</option>
+              <option value="">crushed like a bug in the ground</option>
+            </select>
+            <p>Payee:</p>
+            <input type="text">
+            <p>Outflow:</p>
+            <input type="text">
+            <p>Category:</p>
+            <input type="text">
+            <input type="submit" value="Log Expense" class="button submit">
           </form>
         </section>
       </section>
